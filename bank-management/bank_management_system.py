@@ -1,6 +1,7 @@
 from abc import ABC
 from numpy import random
 from datetime import datetime
+
 class User(ABC):
     def __init__(self, name, email, phone, address, password) -> None:
         self.name = name
@@ -198,10 +199,10 @@ class Bank:
                 print(f"\tAccount Total Balance :{client.balance} BDT\n\tAccount Available Balance : {client.balance-500} BDT")
             elif option == 2:
                 try:
-                    '''amount = float(input("Enter the amount to deposit: "))
+                    amount = float(input("Enter the amount to deposit: "))
                 except ValueError:
                     print("\tInvalid value.Please enter an float value")
-                    continue'''
+                    continue
                 client.deposit(amount)
                 print(f"Deposited {amount} BDT. New Balance: {client.balance}")
             elif option == 3:
@@ -595,14 +596,15 @@ def admin_menu():
             print("\tInvlid input")
             continue
 while True:
-    print("""                                           
-           Welcome to Bank of Programmer's 
-                                          
+    print("""\t\t\t
         
+                                           
+         Welcome to BANK
+                                        
         \n""")
     print("Use this system as a account holder or as an admin")
     print("Options")
-    print("1 : Account owner")
+    print("1 : Account Holder")
     print("2 : Bank Admin")
     print("3 : Exit")
     try:
